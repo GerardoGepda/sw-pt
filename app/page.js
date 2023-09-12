@@ -48,6 +48,19 @@ export default function Home() {
     setCartActive(true);
   }
 
+  const handleRemoveProduct = (id) => {
+    console.log(cart);
+    const editCart = cart.filter(product => product.item.id != id);
+    console.log(editCart);
+    setCart(editCart);
+    setCartActive(true);
+  }
+
+  const handleNewCant = (id, cant) => {
+    console.log(cart);
+    console.log(cart.indexOf(cart.find(product => product.item.id != id)));
+  }
+
   const handleAcceptOrder = (cart) => {
     if (localStorage.getItem("orders")) {
         const orders = JSON.parse(localStorage.getItem("orders"));
