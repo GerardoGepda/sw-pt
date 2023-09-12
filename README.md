@@ -9,7 +9,8 @@ Paquetes incluidos
 - [Next.js](https://nextjs.org/)
 - [React.js](https://react.dev/)
 - [Material UI](https://mui.com/)
-- [Joy UI]
+- Joy UI
+- Node.JS v18.17.1
 
 ### Encendiendo el servidor
 ```bash

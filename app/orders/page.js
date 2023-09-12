@@ -14,6 +14,8 @@ export default function Page() {
     const ordersInfo = localStorage.getItem("orders");
     if (orders) {
       setOrders(JSON.parse(localStorage.getItem("orders")));
+    } else {
+      setOrders([])
     }
   }, []);
 
@@ -30,7 +32,10 @@ export default function Page() {
         <Typography level='h2' textAlign='center'>Ordenes Realizadas</Typography>
         <hr />
         <div className='row'>
-          <AccordionGroup>
+        {
+
+          orders.length > 0 ?  
+          (<AccordionGroup>
             {
               orders.map((order, i) => {
                 return (
@@ -78,7 +83,8 @@ export default function Page() {
                 )
               })
             }
-          </AccordionGroup>
+          </AccordionGroup>) : <Typography level='h4' textAlign='center'>Sin Ordenes</Typography>
+        }
         </div>
       </div>
     </div>

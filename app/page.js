@@ -21,7 +21,6 @@ export default function Home() {
   useEffect(() => {
     async function getData() {
       const newData = await (await fetch("https://65009e8c18c34dee0cd535cb.mockapi.io/food")).json();
-      console.log(newData);
       setData(newData);
     }
     getData()
@@ -43,7 +42,6 @@ export default function Home() {
   const handleAddProduct = (product) => {
     const editCart = cart;
     editCart.push(product);
-    console.log(editCart);
     setCart(editCart);
     setCartActive(true);
   }
